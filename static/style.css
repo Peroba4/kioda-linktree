@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    background: #1d1f21;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Fundo com baixa opacidade */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/uploads/impressoras.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+    z-index: 0;
+}
+
+/* --- ÁREA DO TOPO --- */
+
+.header-area {
+    margin-top: 40px;
+    text-align: center;
+    z-index: 2;
+}
+
+/* LOGO REDONDA */
+
+.logo-circle {
+    width: 190px;
+    height: 190px;
+    margin: 0 auto 25px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(0,0,0,0.4);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- NOME + VERIFIED --- */
+
+.brand-name {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.verified-icon {
+    width: 32px;
+    height: 32px;
+}
+
+/* TAGLINE */
+.tagline {
+    color: rgba(255,255,255,0.85);
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+/* --- BOTÕES --- */
+
+.links-container {
+    margin-top: 60px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    z-index: 2;
+}
+
+.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    padding: 22px 40px;
+    font-size: 26px;
+    color: white;
+
+    background: rgba(255,255,255,0.15);
+    border-radius: 50px;
+    border: 2px solid rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+
+    text-decoration: none;
+    transition: all 0.6s ease;
+    width: 100%;
+}
+
+/* ALINHAMENTO DOS ÍCONES À ESQUERDA */
+.icon-btn {
+    position: absolute;
+    left: 30px;
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    transition: all 0.6s ease; /* Animação do ícone */
+}
+
+/* ANIMAÇÃO DO HOVER NOS BOTÕES */
+.link-button:hover {
+    background: rgba(255,255,255,0.25);
+    border-color: rgba(255,255,255,0.45);
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+/* ANIMAÇÃO DO ÍCONE NO HOVER */
+.link-button:hover .icon-btn {
+    transform: scale(1.15) rotate(8deg);
+}
+
+/* AJUSTE PARA DESKTOP (MAIOR) */
+@media (min-width: 900px) {
+    .logo-circle {
+        width: 240px;
+        height: 240px;
+    }
+
+    .brand-name {
+        font-size: 60px;
+    }
+
+    .verified-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .tagline {
+        font-size: 28px;
+    }
+
+    .link-button {
+        font-size: 30px;
+        padding: 28px 50px;
+    }
+
+    .icon-btn {
+        left: 40px;
+        width: 45px;
+        height: 45px;
+    }
+}

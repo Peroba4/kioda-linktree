@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIODA - Links</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <div class="header-area">
+        <div class="logo-circle">
+            <img src="{{ url_for('static', filename='uploads/logokioda.jpeg') }}" alt="Logo">
+        </div>
+
+        <h2 class="brand-name">
+        KIODA <img src="{{ url_for('static', filename='uploads/verified.png') }}" class="verified-icon">
+        </h2>
+
+        <p class="tagline">Exclusividade em cada detalhe.</p>
+    </div>
+        
+        <div class="links-container">
+            <a href="https://wa.me/5561982590313" target="_blank" class="link-button">
+                <img src="{{ url_for('static', filename='uploads/whatsapp.png') }}" class="icon-btn">
+                Fale Conosco
+            </a>
+            <a href="/catalogo" target="_blank" class="link-button">
+                <img src="{{ url_for('static', filename='uploads/pdf.png') }}" class="icon-btn">
+                Catálogo Online
+            </a>
+            <a href="https://instagram.com/SEUPERFIL" target="_blank" class="link-button">
+                <img src="{{ url_for('static', filename='uploads/instagram.png') }}" class="icon-btn">
+                Instagram
+            </a>
+            <a href="https://www.tiktok.com/@kioda_3d?_r=1&_t=ZS-940SE8ngg4q" target="_blank" class="link-button">
+                <img src="{{ url_for('static', filename='uploads/tiktok.png') }}" class="icon-btn">
+                TikTok
+            </a>
+            
+        </div>
+    </div>
+</body>
+</html>
