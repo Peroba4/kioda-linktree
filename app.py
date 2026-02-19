@@ -14,7 +14,7 @@ def index():
 @app.route('/catalogo')
 def catalogo():
     # Retorna o PDF do catálogo
-    return send_from_directory(app.config['UPLOAD_FOLDER'], 'catalogo.pdf')
+    return send_from_directory(app.config['UPLOAD_FOLDER'], 'CATÁLOGOKIODA.pdf')
 
 if __name__ == '__main__':
     app.run(debug=True)
